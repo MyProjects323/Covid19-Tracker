@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>COVID-19 Tracker</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron text-center">
+        <h1>COVID 19 TRACKER</h1>
+        <p>Numbers that matter.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-12">
+          <div class="form-group">
+            <button class="btn btn-primary" onclick="getData()">
+              GET DATA
+            </button>
+          </div>
+          <div class="form-group">
+            <label for="state">Select state:</label>
+            <select
+              class="form-control"
+              id="state"
+              name="state"
+              onchange="changeState()"
+            >
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="district">Select district:</label>
+            <select
+              class="form-control"
+              id="district"
+              name="district"
+              onchange="changeDistrict()"
+            >
+            </select>
+          </div>
+        </div>
+        <div class="col-md-9 col-12">
+          <div class="chart-container container"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
