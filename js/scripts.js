@@ -71,7 +71,7 @@ function changeState() {
   // console.log(districtsData);
   document.getElementById(
     "district"
-  ).innerHTML = `<option selected disabled>Select State</option>`;
+  ).innerHTML = `<option selected disabled>Select District</option>`;
   let districtNames = Object.keys(districtsData);
   let districtOptions = ``;
   districtNames.forEach((district) => {
