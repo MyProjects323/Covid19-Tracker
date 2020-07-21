@@ -1,4 +1,4 @@
-function changeDistrict() {
+function getData() {
   let districtSelected = decodeURIComponent($("#district").val());
   let stateSelected = decodeURIComponent($("#state").val());
   // alert(districtSelected);
@@ -85,14 +85,14 @@ function changeState() {
   document.getElementById("district").innerHTML += districtOptions;
 }
 
-function getData() {
+$( document ).ready(() => {
   // alert('GET DATA');
   var url = "https://api.covid19india.org/state_district_wise.json";
   $.getJSON(url, function (data) {
     if (typeof data == undefined) {
       alert("ERROR IN RECEIVING DATA");
     } else {
-      alert("DATA RECEIVED SUCCESSFULLY");
+      // alert("DATA RECEIVED SUCCESSFULLY");
       // console.log('Fetched data succesffully');
       // console.log(data);
       $global_data = data;
@@ -110,4 +110,4 @@ function getData() {
       document.getElementById("state").innerHTML += stateOptions;
     }
   });
-}
+});

@@ -24,11 +24,6 @@
       <div class="row">
         <div class="col-md-3 col-12">
           <div class="form-group">
-            <button class="btn btn-primary" onclick="getData()">
-              GET DATA
-            </button>
-          </div>
-          <div class="form-group">
             <label for="state">Select state:</label>
             <select
               class="form-control"
@@ -45,10 +40,14 @@
               class="form-control"
               id="district"
               name="district"
-              onchange="changeDistrict()"
             >
             <option selected disabled>Select District</option>
             </select>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary" onclick="getData()">
+              GET DATA
+            </button>
           </div>
         </div>
         <div class="col-md-9 col-12">
